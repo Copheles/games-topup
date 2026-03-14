@@ -9,7 +9,7 @@ function GamePicker() {
       <header className="picker-header">
         <span className="page-badge">ဂိမ်းရွေးချယ်ပါ</span>
         <h1 className="page-title">
-          <span className="title-gradient">ဂိမ်းထပ်ခဲ့ရန်</span>
+          <span className="title-gradient">MyanTop</span>
         </h1>
         <p className="page-subtitle">
           ဂိမ်းရွေးချယ်ပြီး ပက်ကေ့ချ်ကြည့်ပါ

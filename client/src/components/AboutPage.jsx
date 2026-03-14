@@ -5,7 +5,7 @@ function AboutPage() {
         <div className="about-hero-bg" />
         <div className="about-hero-content">
           <span className="about-badge">ကျွန်ုပ်တို့အကြောင်း</span>
-          <h1>ဂိမ်းထပ်ခဲ့ရန် ဝန်ဆောင်မှု</h1>
+          <h1>MyanTop ဝန်ဆောင်မှု</h1>
           <p className="about-hero-desc">
             မြန်မာနိုင်ငံ၏ ယုံကြည်စိတ်ချရဆုံး ဂိမ်းကတ်ထပ်ခဲ့သည့် ဝန်ဆောင်မှုကို ပံ့ပိုးပေးနေပါသည်။
           </p>

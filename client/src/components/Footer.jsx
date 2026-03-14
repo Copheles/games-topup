@@ -6,7 +6,7 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer-inner">
-        <div className="footer-brand">ဂိမ်းထပ်ခဲ့ရန်</div>
+        <div className="footer-brand">MyanTop</div>
         <p className="footer-tagline">ဂိမ်းကတ်များ လျင်မြန်စွာ ထပ်ခဲ့ပါ</p>
         <div className="footer-links">
           <button type="button" onClick={() => navigate('/about')}>ကျွန်ုပ်တို့အကြောင်း</button>

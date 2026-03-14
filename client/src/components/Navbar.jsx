@@ -26,7 +26,7 @@ function Navbar() {
               <path d="M2 17l10 5 10-5" />
             </svg>
           </span>
-          <span className="navbar-title">ဂိမ်းထပ်ခဲ့ရန်</span>
+          <span className="navbar-title">MyanTop</span>
         </button>
 
         <nav className="navbar-nav">
