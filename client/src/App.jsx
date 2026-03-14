@@ -1,87 +1,70 @@
-import { useState } from 'react';
+import { Routes, Route, useParams, useNavigate, useLocation, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import HomePage from './components/HomePage';
+import GamePicker from './components/GamePicker';
+import GamePackagesView from './components/GamePackagesView';
 import Checkout from './components/Checkout';
 import Success from './components/Success';
 import AboutPage from './components/AboutPage';
 import ContactPage from './components/ContactPage';
+import { PACKAGES_BY_GAME } from './data/packages';
+import { GAME_CONFIG } from './data/games';
 import './App.css';
 
-function App() {
-  const [view, setView] = useState('home');
-  const [selectedGame, setSelectedGame] = useState(null);
-  const [selected, setSelected] = useState(null);
-  const [order, setOrder] = useState(null);
+function CheckoutPage() {
+  const { gameId, packageId } = useParams();
+  const navigate = useNavigate();
+  const packages = PACKAGES_BY_GAME[gameId];
+  const pkg = packages?.find((p) => p.id === packageId);
 
-  const handleSelect = (pkg) => {
-    setSelected(pkg);
-    setView('checkout');
-  };
+  if (!pkg || !GAME_CONFIG[gameId]) {
+    return <Navigate to="/" replace />;
+  }
 
-  const handleSuccess = (orderData) => {
-    setOrder(orderData);
-    setView('success');
-  };
+  const selected = { game: gameId, ...pkg };
+  return (
+    <Checkout
+      selected={selected}
+      onSuccess={(order) => navigate('/success', { state: { order } })}
+      onBack={() => navigate(`/game/${gameId}`)}
+      onContact={() => navigate('/contact')}
+    />
+  );
+}
 
-  const handleBackFromCheckout = () => {
-    setView('home');
-    setSelected(null);
-  };
+function SuccessPage() {
+  const { state } = useLocation();
+  const navigate = useNavigate();
+  const order = state?.order;
 
-  const handleBackFromSuccess = () => {
-    setView('home');
-    setSelected(null);
-    setSelectedGame(null);
-    setOrder(null);
-  };
-
-  const handleGoHome = () => {
-    setView('home');
-    setSelected(null);
-    setSelectedGame(null);
-    setOrder(null);
-  };
-
-  const handleAbout = () => setView('about');
-  const handleContact = () => setView('contact');
-
-  let mainContent;
-  if (view === 'checkout' && selected) {
-    mainContent = (
-      <Checkout
-        selected={selected}
-        onSuccess={handleSuccess}
-        onBack={handleBackFromCheckout}
-        onContact={handleContact}
-      />
-    );
-  } else if (view === 'success' && order) {
-    mainContent = <Success order={order} onBack={handleBackFromSuccess} onContact={handleContact} />;
-  } else if (view === 'about') {
-    mainContent = <AboutPage />;
-  } else if (view === 'contact') {
-    mainContent = <ContactPage />;
-  } else {
-    mainContent = (
-      <HomePage
-        selectedGame={selectedGame}
-        onGameSelect={setSelectedGame}
-        onSelect={handleSelect}
-      />
-    );
+  if (!order) {
+    return <Navigate to="/" replace />;
   }
 
   return (
+    <Success
+      order={order}
+      onBack={() => navigate('/')}
+      onContact={() => navigate('/contact')}
+    />
+  );
+}
+
+function App() {
+  return (
     <div className="app-layout">
-      <Navbar
-        onHome={handleGoHome}
-        onAbout={handleAbout}
-        onContact={handleContact}
-        currentView={view}
-      />
-      <main className="app-main">{mainContent}</main>
-      <Footer onAbout={handleAbout} onContact={handleContact} />
+      <Navbar />
+      <main className="app-main">
+        <Routes>
+          <Route path="/" element={<GamePicker />} />
+          <Route path="/game/:gameId" element={<GamePackagesView />} />
+          <Route path="/game/:gameId/checkout/:packageId" element={<CheckoutPage />} />
+          <Route path="/success" element={<SuccessPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
+      </main>
+      <Footer />
     </div>
   );
 }

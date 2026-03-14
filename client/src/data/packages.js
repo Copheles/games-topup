@@ -162,3 +162,27 @@ export const DISCORD_PACKAGES = [
   { id: 'dc-3', amount: 3, price: 24900 },
   { id: 'dc-12', amount: 12, price: 99900 },
 ];
+
+export const PACKAGES_BY_GAME = {
+  'mobile-legends': MOBILE_LEGENDS_PACKAGES,
+  'pubg-mobile': PUBG_PACKAGES,
+  'wildrift': WILDRIFT_PACKAGES,
+  'genshin': GENSHIN_PACKAGES,
+  'freefire': FREEFIRE_PACKAGES,
+  'codm': CODM_PACKAGES,
+  'valorant': VALORANT_PACKAGES,
+  'league': LEAGUE_PACKAGES,
+  'fortnite': FORTNITE_PACKAGES,
+  'roblox': ROBLOX_PACKAGES,
+  'steam': STEAM_PACKAGES,
+  'gta5': GTA5_PACKAGES,
+  'overwatch': OVERWATCH_PACKAGES,
+  'apex': APEX_PACKAGES,
+  'cs2': CS2_PACKAGES,
+  'dota2': DOTA2_PACKAGES,
+  'minecraft': MINECRAFT_PACKAGES,
+  'clash': CLASH_PACKAGES,
+  'brawlstars': BRAWLSTARS_PACKAGES,
+  'amongus': AMONGUS_PACKAGES,
+  'discord': DISCORD_PACKAGES,
+};

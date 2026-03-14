@@ -1,9 +1,14 @@
+import { useParams, useNavigate, Navigate } from 'react-router-dom';
 import PackageCard from './PackageCard';
 import { GAME_CONFIG } from '../data/games';
+import { PACKAGES_BY_GAME } from '../data/packages';
 
-function GamePackagesView({ gameId, packages, onSelect, onBack }) {
+function GamePackagesView() {
+  const { gameId } = useParams();
+  const navigate = useNavigate();
+  const packages = PACKAGES_BY_GAME[gameId];
   const config = GAME_CONFIG[gameId];
-  if (!config) return null;
+  if (!config || !packages) return <Navigate to="/" replace />;
 
   const info = config.info || {};
   const features = info.features || [];
@@ -12,7 +17,7 @@ function GamePackagesView({ gameId, packages, onSelect, onBack }) {
 
   return (
     <div className="game-packages-view">
-      <button className="packages-back-btn" onClick={onBack}>
+      <button className="packages-back-btn" onClick={() => navigate('/')}>
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <path d="M19 12H5M12 19l-7-7 7-7" />
         </svg>
@@ -67,7 +72,7 @@ function GamePackagesView({ gameId, packages, onSelect, onBack }) {
             unit={config.unit}
             accent={config.accent}
             index={i}
-            onSelect={() => onSelect({ game: gameId, ...pkg })}
+            onSelect={() => navigate(`/game/${gameId}/checkout/${pkg.id}`)}
           />
         ))}
       </div>

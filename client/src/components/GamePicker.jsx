@@ -1,6 +1,9 @@
+import { useNavigate } from 'react-router-dom';
 import { GAME_SECTIONS } from '../data/games';
 
-function GamePicker({ onSelect }) {
+function GamePicker() {
+  const navigate = useNavigate();
+
   return (
     <div className="game-picker">
       <header className="picker-header">
@@ -23,7 +26,7 @@ function GamePicker({ onSelect }) {
                   <button
                     key={game.id}
                     className={`game-card game-card--${game.accent}`}
-                    onClick={() => onSelect(game)}
+                    onClick={() => navigate(`/game/${game.id}`)}
                     style={{ animationDelay: `${i * 0.08}s` }}
                   >
                     <div className={`game-card-glow game-card-glow--${game.accent}`} />

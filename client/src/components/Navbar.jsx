@@ -1,7 +1,10 @@
 import { useState, useEffect } from 'react';
+import { useNavigate, useLocation, NavLink } from 'react-router-dom';
 
-function Navbar({ onHome, onAbout, onContact, currentView }) {
+function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? 'hidden' : '';
@@ -16,7 +19,7 @@ function Navbar({ onHome, onAbout, onContact, currentView }) {
   return (
     <header className="navbar">
       <div className="navbar-inner">
-        <button className="navbar-brand" onClick={onHome} type="button">
+        <button className="navbar-brand" onClick={() => navigate('/')} type="button">
           <span className="navbar-logo-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M12 2L2 7l10 5 10-5-10-5z" />
@@ -27,20 +30,18 @@ function Navbar({ onHome, onAbout, onContact, currentView }) {
         </button>
 
         <nav className="navbar-nav">
-          <button
-            type="button"
-            className={`navbar-link ${currentView === 'about' ? 'navbar-link--active' : ''}`}
-            onClick={onAbout}
+          <NavLink
+            to="/about"
+            className={({ isActive }) => `navbar-link ${isActive ? 'navbar-link--active' : ''}`}
           >
             ကျွန်ုပ်တို့အကြောင်း
-          </button>
-          <button
-            type="button"
-            className={`navbar-link ${currentView === 'contact' ? 'navbar-link--active' : ''}`}
-            onClick={onContact}
+          </NavLink>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) => `navbar-link ${isActive ? 'navbar-link--active' : ''}`}
           >
             ဆက်သွယ်ရန်
-          </button>
+          </NavLink>
         </nav>
 
         <button
@@ -64,15 +65,15 @@ function Navbar({ onHome, onAbout, onContact, currentView }) {
         <div className="navbar-mobile-menu">
           <button
             type="button"
-            className={`navbar-mobile-link ${currentView === 'about' ? 'navbar-mobile-link--active' : ''}`}
-            onClick={() => handleNavClick(onAbout)}
+            className={`navbar-mobile-link ${location.pathname === '/about' ? 'navbar-mobile-link--active' : ''}`}
+            onClick={() => handleNavClick(() => navigate('/about'))}
           >
             ကျွန်ုပ်တို့အကြောင်း
           </button>
           <button
             type="button"
-            className={`navbar-mobile-link ${currentView === 'contact' ? 'navbar-mobile-link--active' : ''}`}
-            onClick={() => handleNavClick(onContact)}
+            className={`navbar-mobile-link ${location.pathname === '/contact' ? 'navbar-mobile-link--active' : ''}`}
+            onClick={() => handleNavClick(() => navigate('/contact'))}
           >
             ဆက်သွယ်ရန်
           </button>
