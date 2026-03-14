@@ -1,0 +1,2488 @@
+/* ========== Navbar ========== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(10, 10, 15, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.navbar-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.85rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar-link {
+  background: none;
+  border: none;
+  padding: 0.5rem 0.85rem;
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.navbar-link:hover {
+  color: var(--text-bright);
+  background: var(--glass);
+}
+
+.navbar-link--active {
+  color: var(--accent-ml);
+  background: rgba(6, 182, 212, 0.15);
+}
+
+.navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+  font-family: inherit;
+  color: var(--text-bright);
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: var(--transition);
+  border-radius: var(--radius-sm);
+}
+
+.navbar-brand:hover {
+  color: var(--accent-ml);
+}
+
+.navbar-logo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-logo-icon svg {
+  width: 22px;
+  height: 22px;
+  color: var(--accent-ml);
+}
+
+.navbar-title {
+  letter-spacing: -0.02em;
+}
+
+/* ========== Footer ========== */
+.footer {
+  margin-top: auto;
+  background: var(--bg-card);
+  border-top: 1px solid var(--glass-border);
+  padding: 2rem 1.5rem;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-brand {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text-bright);
+  margin-bottom: 0.35rem;
+}
+
+.footer-tagline {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0 0 1rem;
+}
+
+.footer-links {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.footer-links button {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.footer-links button:hover {
+  color: var(--accent-ml);
+}
+
+.footer-dot {
+  opacity: 0.6;
+}
+
+.footer-copy {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin: 0;
+  opacity: 0.8;
+}
+
+/* ========== App Layout ========== */
+.app-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ========== Home Page ========== */
+.home-page {
+  padding: 2.5rem 1.5rem 4rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.page-badge {
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--accent-ml);
+  margin-bottom: 1rem;
+}
+
+.page-title {
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 800;
+  margin: 0 0 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.title-gradient {
+  background: linear-gradient(135deg, #fafafa 0%, #a1a1aa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.page-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin: 0;
+  font-weight: 400;
+}
+
+.game-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* ========== Game Picker (Home) ========== */
+.game-picker {
+  padding: 1.5rem 1rem 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.picker-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.game-sections-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.game-section-block {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.section-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin: 0 0 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.section-empty {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin: 0;
+  padding: 1.25rem;
+  text-align: center;
+  background: var(--glass);
+  border: 1px dashed var(--glass-border);
+  border-radius: var(--radius-sm);
+}
+
+.game-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.game-card {
+  position: relative;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  animation: fadeInUp 0.6s ease-out backwards;
+}
+
+.game-card-glow {
+  position: absolute;
+  inset: -2px;
+  border-radius: var(--radius-xl);
+  filter: blur(24px);
+  opacity: 0;
+  transition: var(--transition);
+  z-index: 0;
+}
+
+.game-card:hover .game-card-glow {
+  opacity: 0.5;
+}
+
+.game-card-glow--ml {
+  background: var(--accent-ml);
+}
+
+.game-card-glow--pubg {
+  background: var(--accent-pubg);
+}
+
+.game-card-glow--wildrift {
+  background: var(--accent-wildrift);
+}
+
+.game-card-glow--genshin {
+  background: var(--accent-genshin);
+}
+
+.game-card-glow--freefire {
+  background: var(--accent-freefire);
+}
+
+.game-card-glow--codm {
+  background: var(--accent-codm);
+}
+
+.game-card-glow--valorant { background: var(--accent-valorant); }
+.game-card-glow--league { background: var(--accent-league); }
+.game-card-glow--fortnite { background: var(--accent-fortnite); }
+.game-card-glow--roblox { background: var(--accent-roblox); }
+.game-card-glow--steam { background: var(--accent-steam); }
+.game-card-glow--gta5 { background: var(--accent-gta5); }
+.game-card-glow--overwatch { background: var(--accent-overwatch); }
+.game-card-glow--apex { background: var(--accent-apex); }
+.game-card-glow--cs2 { background: var(--accent-cs2); }
+.game-card-glow--dota2 { background: var(--accent-dota2); }
+.game-card-glow--minecraft { background: var(--accent-minecraft); }
+.game-card-glow--clash { background: var(--accent-clash); }
+.game-card-glow--brawlstars { background: var(--accent-brawlstars); }
+.game-card-glow--amongus { background: var(--accent-amongus); }
+.game-card-glow--discord { background: var(--accent-discord); }
+
+.game-card-inner {
+  position: relative;
+  z-index: 1;
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.game-card:hover .game-card-inner {
+  transform: translateY(-4px) scale(1.02);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 24px 48px -20px rgba(0, 0, 0, 0.5);
+}
+
+.game-card--ml:hover .game-card-inner {
+  border-color: rgba(6, 182, 212, 0.3);
+  box-shadow: 0 24px 48px -20px rgba(6, 182, 212, 0.25);
+}
+
+.game-card--pubg:hover .game-card-inner {
+  border-color: rgba(245, 158, 11, 0.3);
+  box-shadow: 0 24px 48px -20px rgba(245, 158, 11, 0.25);
+}
+
+.game-card--wildrift:hover .game-card-inner {
+  border-color: rgba(236, 72, 153, 0.3);
+  box-shadow: 0 24px 48px -20px rgba(236, 72, 153, 0.25);
+}
+
+.game-card--genshin:hover .game-card-inner {
+  border-color: rgba(16, 185, 129, 0.3);
+  box-shadow: 0 24px 48px -20px rgba(16, 185, 129, 0.25);
+}
+
+.game-card--freefire:hover .game-card-inner {
+  border-color: rgba(239, 68, 68, 0.3);
+  box-shadow: 0 24px 48px -20px rgba(239, 68, 68, 0.25);
+}
+
+.game-card--codm:hover .game-card-inner {
+  border-color: rgba(59, 130, 246, 0.3);
+  box-shadow: 0 24px 48px -20px rgba(59, 130, 246, 0.25);
+}
+
+.game-card--valorant:hover .game-card-inner { border-color: rgba(255, 70, 85, 0.3); box-shadow: 0 24px 48px -20px rgba(255, 70, 85, 0.25); }
+.game-card--league:hover .game-card-inner { border-color: rgba(201, 162, 39, 0.3); box-shadow: 0 24px 48px -20px rgba(201, 162, 39, 0.25); }
+.game-card--fortnite:hover .game-card-inner { border-color: rgba(139, 92, 246, 0.3); box-shadow: 0 24px 48px -20px rgba(139, 92, 246, 0.25); }
+.game-card--roblox:hover .game-card-inner { border-color: rgba(0, 162, 255, 0.3); box-shadow: 0 24px 48px -20px rgba(0, 162, 255, 0.25); }
+.game-card--steam:hover .game-card-inner { border-color: rgba(27, 40, 56, 0.5); box-shadow: 0 24px 48px -20px rgba(27, 40, 56, 0.3); }
+.game-card--gta5:hover .game-card-inner { border-color: rgba(249, 115, 22, 0.3); box-shadow: 0 24px 48px -20px rgba(249, 115, 22, 0.25); }
+.game-card--overwatch:hover .game-card-inner { border-color: rgba(249, 158, 26, 0.3); box-shadow: 0 24px 48px -20px rgba(249, 158, 26, 0.25); }
+.game-card--apex:hover .game-card-inner { border-color: rgba(218, 41, 42, 0.3); box-shadow: 0 24px 48px -20px rgba(218, 41, 42, 0.25); }
+.game-card--cs2:hover .game-card-inner { border-color: rgba(230, 134, 25, 0.3); box-shadow: 0 24px 48px -20px rgba(230, 134, 25, 0.25); }
+.game-card--dota2:hover .game-card-inner { border-color: rgba(211, 47, 47, 0.3); box-shadow: 0 24px 48px -20px rgba(211, 47, 47, 0.25); }
+.game-card--minecraft:hover .game-card-inner { border-color: rgba(124, 179, 66, 0.3); box-shadow: 0 24px 48px -20px rgba(124, 179, 66, 0.25); }
+.game-card--clash:hover .game-card-inner { border-color: rgba(255, 152, 0, 0.3); box-shadow: 0 24px 48px -20px rgba(255, 152, 0, 0.25); }
+.game-card--brawlstars:hover .game-card-inner { border-color: rgba(255, 193, 7, 0.3); box-shadow: 0 24px 48px -20px rgba(255, 193, 7, 0.25); }
+.game-card--amongus:hover .game-card-inner { border-color: rgba(233, 30, 99, 0.3); box-shadow: 0 24px 48px -20px rgba(233, 30, 99, 0.25); }
+.game-card--discord:hover .game-card-inner { border-color: rgba(88, 101, 242, 0.3); box-shadow: 0 24px 48px -20px rgba(88, 101, 242, 0.25); }
+
+.game-card-image-wrap {
+  flex-shrink: 0;
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.game-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.game-card-content {
+  flex: 1;
+  min-width: 0;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.game-card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-bright);
+  margin: 0 0 0.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: center;
+}
+
+.game-card-subtitle {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.game-card-badge {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.35rem;
+}
+
+.game-card-badge--ml {
+  background: rgba(6, 182, 212, 0.2);
+  color: var(--accent-ml);
+}
+
+.game-card-badge--pubg {
+  background: rgba(245, 158, 11, 0.2);
+  color: var(--accent-pubg);
+}
+
+.game-card-badge--wildrift {
+  background: rgba(236, 72, 153, 0.2);
+  color: var(--accent-wildrift);
+}
+
+.game-card-badge--genshin {
+  background: rgba(16, 185, 129, 0.2);
+  color: var(--accent-genshin);
+}
+
+.game-card-badge--freefire {
+  background: rgba(239, 68, 68, 0.2);
+  color: var(--accent-freefire);
+}
+
+.game-card-badge--codm {
+  background: rgba(59, 130, 246, 0.2);
+  color: var(--accent-codm);
+}
+
+.game-card-badge--valorant { background: rgba(255, 70, 85, 0.2); color: var(--accent-valorant); }
+.game-card-badge--league { background: rgba(201, 162, 39, 0.2); color: var(--accent-league); }
+.game-card-badge--fortnite { background: rgba(139, 92, 246, 0.2); color: var(--accent-fortnite); }
+.game-card-badge--roblox { background: rgba(0, 162, 255, 0.2); color: var(--accent-roblox); }
+.game-card-badge--steam { background: rgba(27, 40, 56, 0.5); color: #66c0f4; }
+.game-card-badge--gta5 { background: rgba(249, 115, 22, 0.2); color: var(--accent-gta5); }
+.game-card-badge--overwatch { background: rgba(249, 158, 26, 0.2); color: var(--accent-overwatch); }
+.game-card-badge--apex { background: rgba(218, 41, 42, 0.2); color: var(--accent-apex); }
+.game-card-badge--cs2 { background: rgba(230, 134, 25, 0.2); color: var(--accent-cs2); }
+.game-card-badge--dota2 { background: rgba(211, 47, 47, 0.2); color: var(--accent-dota2); }
+.game-card-badge--minecraft { background: rgba(124, 179, 66, 0.2); color: var(--accent-minecraft); }
+.game-card-badge--clash { background: rgba(255, 152, 0, 0.2); color: var(--accent-clash); }
+.game-card-badge--brawlstars { background: rgba(255, 193, 7, 0.2); color: var(--accent-brawlstars); }
+.game-card-badge--amongus { background: rgba(233, 30, 99, 0.2); color: var(--accent-amongus); }
+.game-card-badge--discord { background: rgba(88, 101, 242, 0.2); color: var(--accent-discord); }
+
+.game-card-desc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin: 0 0 0.5rem;
+  line-height: 1.3;
+}
+
+.game-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text);
+  transition: var(--transition);
+  margin-top: auto;
+}
+
+.game-card-cta svg {
+  width: 14px;
+  height: 14px;
+}
+
+.game-card:hover .game-card-cta {
+  color: var(--text-bright);
+}
+
+.game-card--ml:hover .game-card-cta {
+  color: var(--accent-ml);
+}
+
+.game-card--pubg:hover .game-card-cta {
+  color: var(--accent-pubg);
+}
+
+.game-card--wildrift:hover .game-card-cta {
+  color: var(--accent-wildrift);
+}
+
+.game-card--genshin:hover .game-card-cta {
+  color: var(--accent-genshin);
+}
+
+.game-card--freefire:hover .game-card-cta {
+  color: var(--accent-freefire);
+}
+
+.game-card--codm:hover .game-card-cta {
+  color: var(--accent-codm);
+}
+
+.game-card--valorant:hover .game-card-cta { color: var(--accent-valorant); }
+.game-card--league:hover .game-card-cta { color: var(--accent-league); }
+.game-card--fortnite:hover .game-card-cta { color: var(--accent-fortnite); }
+.game-card--roblox:hover .game-card-cta { color: var(--accent-roblox); }
+.game-card--steam:hover .game-card-cta { color: #66c0f4; }
+.game-card--gta5:hover .game-card-cta { color: var(--accent-gta5); }
+.game-card--overwatch:hover .game-card-cta { color: var(--accent-overwatch); }
+.game-card--apex:hover .game-card-cta { color: var(--accent-apex); }
+.game-card--cs2:hover .game-card-cta { color: var(--accent-cs2); }
+.game-card--dota2:hover .game-card-cta { color: var(--accent-dota2); }
+.game-card--minecraft:hover .game-card-cta { color: var(--accent-minecraft); }
+.game-card--clash:hover .game-card-cta { color: var(--accent-clash); }
+.game-card--brawlstars:hover .game-card-cta { color: var(--accent-brawlstars); }
+.game-card--amongus:hover .game-card-cta { color: var(--accent-amongus); }
+.game-card--discord:hover .game-card-cta { color: var(--accent-discord); }
+
+/* ========== Game Packages View ========== */
+/* ========== Game Packages View (Mobile-first) ========== */
+.game-packages-view {
+  padding: 0 0 2rem;
+  max-width: 480px;
+  margin: 0 auto;
+  flex: 1;
+  padding-bottom: env(safe-area-inset-bottom, 2rem);
+}
+
+.packages-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  margin: 0.75rem 1rem 0;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.packages-back-btn:hover {
+  background: var(--bg-card);
+  color: var(--text-bright);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.packages-back-btn svg {
+  flex-shrink: 0;
+}
+
+.packages-hero {
+  position: relative;
+  margin: 1rem 1rem 1.25rem;
+  padding: 1.5rem 1.25rem;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.packages-hero-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.6) 100%);
+  z-index: 0;
+}
+
+.packages-hero-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.packages-hero-image-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.packages-hero-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.packages-hero-glow {
+  position: absolute;
+  inset: -16px;
+  border-radius: var(--radius-xl);
+  filter: blur(28px);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.packages-hero-glow--ml { background: var(--accent-ml); }
+.packages-hero-glow--pubg { background: var(--accent-pubg); }
+.packages-hero-glow--wildrift { background: var(--accent-wildrift); }
+.packages-hero-glow--genshin { background: var(--accent-genshin); }
+.packages-hero-glow--freefire { background: var(--accent-freefire); }
+.packages-hero-glow--codm { background: var(--accent-codm); }
+.packages-hero-glow--valorant { background: var(--accent-valorant); }
+.packages-hero-glow--league { background: var(--accent-league); }
+.packages-hero-glow--fortnite { background: var(--accent-fortnite); }
+.packages-hero-glow--roblox { background: var(--accent-roblox); }
+.packages-hero-glow--steam { background: var(--accent-steam); }
+.packages-hero-glow--gta5 { background: var(--accent-gta5); }
+.packages-hero-glow--overwatch { background: var(--accent-overwatch); }
+.packages-hero-glow--apex { background: var(--accent-apex); }
+.packages-hero-glow--cs2 { background: var(--accent-cs2); }
+.packages-hero-glow--dota2 { background: var(--accent-dota2); }
+.packages-hero-glow--minecraft { background: var(--accent-minecraft); }
+.packages-hero-glow--clash { background: var(--accent-clash); }
+.packages-hero-glow--brawlstars { background: var(--accent-brawlstars); }
+.packages-hero-glow--amongus { background: var(--accent-amongus); }
+.packages-hero-glow--discord { background: var(--accent-discord); }
+
+.packages-hero-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.packages-hero-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-bright);
+  margin: 0 0 0.35rem;
+  letter-spacing: -0.02em;
+}
+
+.packages-hero-badge {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.packages-hero-badge--ml { background: rgba(6, 182, 212, 0.3); color: #7dd3fc; }
+.packages-hero-badge--pubg { background: rgba(245, 158, 11, 0.3); color: #fcd34d; }
+.packages-hero-badge--wildrift { background: rgba(236, 72, 153, 0.3); color: #f9a8d4; }
+.packages-hero-badge--genshin { background: rgba(16, 185, 129, 0.3); color: #6ee7b7; }
+.packages-hero-badge--freefire { background: rgba(239, 68, 68, 0.3); color: #fca5a5; }
+.packages-hero-badge--codm { background: rgba(59, 130, 246, 0.3); color: #93c5fd; }
+.packages-hero-badge--valorant { background: rgba(255, 70, 85, 0.3); color: #fda4af; }
+.packages-hero-badge--league { background: rgba(201, 162, 39, 0.3); color: #fde047; }
+.packages-hero-badge--fortnite { background: rgba(139, 92, 246, 0.3); color: #c4b5fd; }
+.packages-hero-badge--roblox { background: rgba(0, 162, 255, 0.3); color: #7dd3fc; }
+.packages-hero-badge--steam { background: rgba(27, 40, 56, 0.6); color: #66c0f4; }
+.packages-hero-badge--gta5 { background: rgba(249, 115, 22, 0.3); color: #fdba74; }
+.packages-hero-badge--overwatch { background: rgba(249, 158, 26, 0.3); color: #fcd34d; }
+.packages-hero-badge--apex { background: rgba(218, 41, 42, 0.3); color: #fca5a5; }
+.packages-hero-badge--cs2 { background: rgba(230, 134, 25, 0.3); color: #fcd34d; }
+.packages-hero-badge--dota2 { background: rgba(211, 47, 47, 0.3); color: #fca5a5; }
+.packages-hero-badge--minecraft { background: rgba(124, 179, 66, 0.3); color: #86efac; }
+.packages-hero-badge--clash { background: rgba(255, 152, 0, 0.3); color: #fdba74; }
+.packages-hero-badge--brawlstars { background: rgba(255, 193, 7, 0.3); color: #fde047; }
+.packages-hero-badge--amongus { background: rgba(233, 30, 99, 0.3); color: #f9a8d4; }
+.packages-hero-badge--discord { background: rgba(88, 101, 242, 0.3); color: #a5b4fc; }
+
+.packages-info-card {
+  margin: 0 1rem 1.25rem;
+  padding: 1.25rem;
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  animation: fadeInUp 0.5s ease-out 0.1s backwards;
+}
+
+.packages-info-desc {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--text);
+  margin: 0 0 1rem;
+}
+
+.packages-info-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.packages-info-tag {
+  display: inline-block;
+  padding: 0.3rem 0.65rem;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.packages-info-delivery {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--success);
+  margin: 0;
+}
+
+.packages-info-delivery svg {
+  flex-shrink: 0;
+  opacity: 0.9;
+}
+
+.packages-section-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 1rem 0.75rem;
+}
+
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  padding: 0 1rem;
+}
+
+/* Packages view: tablet+ */
+@media (min-width: 640px) {
+  .game-packages-view {
+    max-width: 560px;
+  }
+
+  .packages-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.85rem;
+  }
+}
+
+/* ========== Game Section ========== */
+.game-section {
+  animation: fadeInUp 0.6s ease-out backwards;
+}
+
+.game-section-inner {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  transition: var(--transition);
+}
+
+.game-section-inner:hover {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.game-section-header {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.game-banner-wrap {
+  position: relative;
+}
+
+.game-banner {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--glass-border);
+  position: relative;
+  z-index: 1;
+}
+
+.game-banner-glow {
+  position: absolute;
+  inset: -8px;
+  border-radius: var(--radius-lg);
+  filter: blur(20px);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.game-banner-glow--ml {
+  background: var(--accent-ml);
+}
+
+.game-banner-glow--pubg {
+  background: var(--accent-pubg);
+}
+
+.game-header-text {
+  flex: 1;
+}
+
+.game-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-bright);
+  margin: 0 0 0.35rem;
+}
+
+.game-badge {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.game-badge--ml {
+  background: rgba(6, 182, 212, 0.2);
+  color: var(--accent-ml);
+}
+
+.game-badge--pubg {
+  background: rgba(245, 158, 11, 0.2);
+  color: var(--accent-pubg);
+}
+
+.game-badge--valorant { background: rgba(255, 70, 85, 0.2); color: var(--accent-valorant); }
+.game-badge--league { background: rgba(201, 162, 39, 0.2); color: var(--accent-league); }
+.game-badge--fortnite { background: rgba(139, 92, 246, 0.2); color: var(--accent-fortnite); }
+.game-badge--roblox { background: rgba(0, 162, 255, 0.2); color: var(--accent-roblox); }
+.game-badge--steam { background: rgba(27, 40, 56, 0.5); color: #66c0f4; }
+.game-badge--gta5 { background: rgba(249, 115, 22, 0.2); color: var(--accent-gta5); }
+.game-badge--overwatch { background: rgba(249, 158, 26, 0.2); color: var(--accent-overwatch); }
+.game-badge--apex { background: rgba(218, 41, 42, 0.2); color: var(--accent-apex); }
+.game-badge--cs2 { background: rgba(230, 134, 25, 0.2); color: var(--accent-cs2); }
+.game-badge--dota2 { background: rgba(211, 47, 47, 0.2); color: var(--accent-dota2); }
+
+.package-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+/* ========== Package Card ========== */
+.package-card {
+  animation: fadeInUp 0.5s ease-out backwards;
+}
+
+.package-card-inner {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+  text-align: center;
+  transition: var(--transition);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.package-card:hover .package-card-inner {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.5);
+}
+
+.package-card--ml:hover .package-card-inner {
+  box-shadow: var(--shadow-glow) var(--accent-ml-glow);
+}
+
+.package-card--pubg:hover .package-card-inner {
+  box-shadow: var(--shadow-glow) var(--accent-pubg-glow);
+}
+
+.package-card--wildrift:hover .package-card-inner {
+  box-shadow: var(--shadow-glow) var(--accent-wildrift-glow);
+}
+
+.package-card--genshin:hover .package-card-inner {
+  box-shadow: var(--shadow-glow) var(--accent-genshin-glow);
+}
+
+.package-card--freefire:hover .package-card-inner {
+  box-shadow: var(--shadow-glow) var(--accent-freefire-glow);
+}
+
+.package-card--codm:hover .package-card-inner {
+  box-shadow: var(--shadow-glow) var(--accent-codm-glow);
+}
+
+.package-card--valorant:hover .package-card-inner { box-shadow: var(--shadow-glow) var(--accent-valorant-glow); }
+.package-card--league:hover .package-card-inner { box-shadow: var(--shadow-glow) var(--accent-league-glow); }
+.package-card--fortnite:hover .package-card-inner { box-shadow: var(--shadow-glow) var(--accent-fortnite-glow); }
+.package-card--roblox:hover .package-card-inner { box-shadow: var(--shadow-glow) var(--accent-roblox-glow); }
+.package-card--steam:hover .package-card-inner { box-shadow: var(--shadow-glow) var(--accent-steam-glow); }
+.package-card--gta5:hover .package-card-inner { box-shadow: var(--shadow-glow) var(--accent-gta5-glow); }
+.package-card--overwatch:hover .package-card-inner { box-shadow: var(--shadow-glow) var(--accent-overwatch-glow); }
+.package-card--apex:hover .package-card-inner { box-shadow: var(--shadow-glow) var(--accent-apex-glow); }
+.package-card--cs2:hover .package-card-inner { box-shadow: var(--shadow-glow) var(--accent-cs2-glow); }
+.package-card--dota2:hover .package-card-inner { box-shadow: var(--shadow-glow) var(--accent-dota2-glow); }
+.package-card--minecraft:hover .package-card-inner { box-shadow: var(--shadow-glow) var(--accent-minecraft-glow); }
+.package-card--clash:hover .package-card-inner { box-shadow: var(--shadow-glow) var(--accent-clash-glow); }
+.package-card--brawlstars:hover .package-card-inner { box-shadow: var(--shadow-glow) var(--accent-brawlstars-glow); }
+.package-card--amongus:hover .package-card-inner { box-shadow: var(--shadow-glow) var(--accent-amongus-glow); }
+.package-card--discord:hover .package-card-inner { box-shadow: var(--shadow-glow) var(--accent-discord-glow); }
+
+.package-amount {
+  margin-bottom: 0.35rem;
+}
+
+.package-amount-value {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text-bright);
+  display: block;
+  letter-spacing: -0.02em;
+}
+
+.package-amount-unit {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.package-price {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+}
+
+.package-buy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  width: 100%;
+  min-height: 44px;
+  padding: 0.6rem 0.75rem;
+  border: none;
+  border-radius: 8px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: var(--transition);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.package-buy svg {
+  width: 12px;
+  height: 12px;
+}
+
+.package-buy--ml {
+  background: linear-gradient(135deg, var(--accent-ml), #0891b2);
+  color: white;
+}
+
+.package-buy--ml:hover {
+  background: linear-gradient(135deg, #0891b2, var(--accent-ml));
+  transform: scale(1.02);
+  box-shadow: 0 0 20px var(--accent-ml-glow);
+}
+
+.package-buy--pubg {
+  background: linear-gradient(135deg, var(--accent-pubg), #d97706);
+  color: white;
+}
+
+.package-buy--pubg:hover {
+  background: linear-gradient(135deg, #d97706, var(--accent-pubg));
+  transform: scale(1.02);
+  box-shadow: 0 0 20px var(--accent-pubg-glow);
+}
+
+.package-buy--wildrift {
+  background: linear-gradient(135deg, var(--accent-wildrift), #db2777);
+  color: white;
+}
+
+.package-buy--wildrift:hover {
+  background: linear-gradient(135deg, #db2777, var(--accent-wildrift));
+  transform: scale(1.02);
+  box-shadow: 0 0 20px var(--accent-wildrift-glow);
+}
+
+.package-buy--genshin {
+  background: linear-gradient(135deg, var(--accent-genshin), #059669);
+  color: white;
+}
+
+.package-buy--genshin:hover {
+  background: linear-gradient(135deg, #059669, var(--accent-genshin));
+  transform: scale(1.02);
+  box-shadow: 0 0 20px var(--accent-genshin-glow);
+}
+
+.package-buy--freefire {
+  background: linear-gradient(135deg, var(--accent-freefire), #dc2626);
+  color: white;
+}
+
+.package-buy--freefire:hover {
+  background: linear-gradient(135deg, #dc2626, var(--accent-freefire));
+  transform: scale(1.02);
+  box-shadow: 0 0 20px var(--accent-freefire-glow);
+}
+
+.package-buy--codm {
+  background: linear-gradient(135deg, var(--accent-codm), #2563eb);
+  color: white;
+}
+
+.package-buy--codm:hover {
+  background: linear-gradient(135deg, #2563eb, var(--accent-codm));
+  transform: scale(1.02);
+  box-shadow: 0 0 20px var(--accent-codm-glow);
+}
+
+.package-buy--valorant { background: linear-gradient(135deg, var(--accent-valorant), #e63946); color: white; }
+.package-buy--valorant:hover { background: linear-gradient(135deg, #e63946, var(--accent-valorant)); transform: scale(1.02); box-shadow: 0 0 20px var(--accent-valorant-glow); }
+.package-buy--league { background: linear-gradient(135deg, var(--accent-league), #b8860b); color: white; }
+.package-buy--league:hover { background: linear-gradient(135deg, #b8860b, var(--accent-league)); transform: scale(1.02); box-shadow: 0 0 20px var(--accent-league-glow); }
+.package-buy--fortnite { background: linear-gradient(135deg, var(--accent-fortnite), #7c3aed); color: white; }
+.package-buy--fortnite:hover { background: linear-gradient(135deg, #7c3aed, var(--accent-fortnite)); transform: scale(1.02); box-shadow: 0 0 20px var(--accent-fortnite-glow); }
+.package-buy--roblox { background: linear-gradient(135deg, var(--accent-roblox), #0091d4); color: white; }
+.package-buy--roblox:hover { background: linear-gradient(135deg, #0091d4, var(--accent-roblox)); transform: scale(1.02); box-shadow: 0 0 20px var(--accent-roblox-glow); }
+.package-buy--steam { background: linear-gradient(135deg, var(--accent-steam), #2a475e); color: white; }
+.package-buy--steam:hover { background: linear-gradient(135deg, #2a475e, var(--accent-steam)); transform: scale(1.02); box-shadow: 0 0 20px var(--accent-steam-glow); }
+.package-buy--gta5 { background: linear-gradient(135deg, var(--accent-gta5), #ea580c); color: white; }
+.package-buy--gta5:hover { background: linear-gradient(135deg, #ea580c, var(--accent-gta5)); transform: scale(1.02); box-shadow: 0 0 20px var(--accent-gta5-glow); }
+.package-buy--overwatch { background: linear-gradient(135deg, var(--accent-overwatch), #e0890f); color: white; }
+.package-buy--overwatch:hover { background: linear-gradient(135deg, #e0890f, var(--accent-overwatch)); transform: scale(1.02); box-shadow: 0 0 20px var(--accent-overwatch-glow); }
+.package-buy--apex { background: linear-gradient(135deg, var(--accent-apex), #b91c1c); color: white; }
+.package-buy--apex:hover { background: linear-gradient(135deg, #b91c1c, var(--accent-apex)); transform: scale(1.02); box-shadow: 0 0 20px var(--accent-apex-glow); }
+.package-buy--cs2 { background: linear-gradient(135deg, var(--accent-cs2), #d97706); color: white; }
+.package-buy--cs2:hover { background: linear-gradient(135deg, #d97706, var(--accent-cs2)); transform: scale(1.02); box-shadow: 0 0 20px var(--accent-cs2-glow); }
+.package-buy--dota2 { background: linear-gradient(135deg, var(--accent-dota2), #b71c1c); color: white; }
+.package-buy--dota2:hover { background: linear-gradient(135deg, #b71c1c, var(--accent-dota2)); transform: scale(1.02); box-shadow: 0 0 20px var(--accent-dota2-glow); }
+.package-buy--minecraft { background: linear-gradient(135deg, var(--accent-minecraft), #558b2f); color: white; }
+.package-buy--minecraft:hover { background: linear-gradient(135deg, #558b2f, var(--accent-minecraft)); transform: scale(1.02); box-shadow: 0 0 20px var(--accent-minecraft-glow); }
+.package-buy--clash { background: linear-gradient(135deg, var(--accent-clash), #f57c00); color: white; }
+.package-buy--clash:hover { background: linear-gradient(135deg, #f57c00, var(--accent-clash)); transform: scale(1.02); box-shadow: 0 0 20px var(--accent-clash-glow); }
+.package-buy--brawlstars { background: linear-gradient(135deg, var(--accent-brawlstars), #ff9800); color: white; }
+.package-buy--brawlstars:hover { background: linear-gradient(135deg, #ff9800, var(--accent-brawlstars)); transform: scale(1.02); box-shadow: 0 0 20px var(--accent-brawlstars-glow); }
+.package-buy--amongus { background: linear-gradient(135deg, var(--accent-amongus), #c2185b); color: white; }
+.package-buy--amongus:hover { background: linear-gradient(135deg, #c2185b, var(--accent-amongus)); transform: scale(1.02); box-shadow: 0 0 20px var(--accent-amongus-glow); }
+.package-buy--discord { background: linear-gradient(135deg, var(--accent-discord), #4752c4); color: white; }
+.package-buy--discord:hover { background: linear-gradient(135deg, #4752c4, var(--accent-discord)); transform: scale(1.02); box-shadow: 0 0 20px var(--accent-discord-glow); }
+
+/* ========== Checkout ========== */
+.checkout-page {
+  padding: 1.5rem 1rem 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout-container {
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.checkout-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  transition: var(--transition);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.checkout-back-btn:hover {
+  background: var(--bg-card);
+  color: var(--text-bright);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.checkout-steps {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.checkout-step {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.checkout-step--active {
+  color: var(--text-bright);
+  font-weight: 600;
+}
+
+.checkout-step--active .checkout-step-num {
+  background: var(--accent-ml);
+  color: white;
+}
+
+.checkout-step-num {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.checkout-step-line {
+  flex: 1;
+  max-width: 40px;
+  height: 2px;
+  background: var(--glass-border);
+}
+
+.checkout-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .checkout-layout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .checkout-main {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .checkout-sidebar {
+    width: 280px;
+    flex-shrink: 0;
+  }
+}
+
+.checkout-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.checkout-section-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-bright);
+  margin: 0 0 1.25rem;
+}
+
+.checkout-order-summary {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  position: sticky;
+  top: 100px;
+}
+
+.checkout-order-summary h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-bright);
+  margin: 0 0 1rem;
+}
+
+.checkout-order-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.checkout-order-img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--glass-border);
+}
+
+.checkout-order-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.checkout-order-game {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-bright);
+  margin: 0 0 0.2rem;
+}
+
+.checkout-order-pkg {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.checkout-order-divider {
+  height: 1px;
+  background: var(--glass-border);
+  margin: 1rem 0;
+}
+
+.checkout-order-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.checkout-order-total {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text-bright);
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+.checkout-delivery-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--glass-border);
+  font-size: 0.85rem;
+  color: var(--success);
+}
+
+.checkout-delivery-info svg {
+  flex-shrink: 0;
+}
+
+.checkout-help-card {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+}
+
+.checkout-help-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-bright);
+  margin: 0 0 0.35rem;
+}
+
+.checkout-help-text {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: 0 0 0.5rem;
+}
+
+.checkout-help-link {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--accent-ml);
+  text-decoration: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.checkout-help-link:hover {
+  text-decoration: underline;
+}
+
+.checkout-security-note {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.checkout-security-note svg {
+  flex-shrink: 0;
+  opacity: 0.8;
+}
+
+.checkout-submit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: var(--transition);
+}
+
+.checkout-submit-btn--ml { background: linear-gradient(135deg, var(--accent-ml), #0891b2); color: white; }
+.checkout-submit-btn--ml:hover:not(:disabled) { box-shadow: 0 0 24px var(--accent-ml-glow); transform: translateY(-1px); }
+.checkout-submit-btn--pubg { background: linear-gradient(135deg, var(--accent-pubg), #d97706); color: white; }
+.checkout-submit-btn--pubg:hover:not(:disabled) { box-shadow: 0 0 24px var(--accent-pubg-glow); transform: translateY(-1px); }
+.checkout-submit-btn--wildrift { background: linear-gradient(135deg, var(--accent-wildrift), #db2777); color: white; }
+.checkout-submit-btn--wildrift:hover:not(:disabled) { box-shadow: 0 0 24px var(--accent-wildrift-glow); transform: translateY(-1px); }
+.checkout-submit-btn--genshin { background: linear-gradient(135deg, var(--accent-genshin), #059669); color: white; }
+.checkout-submit-btn--genshin:hover:not(:disabled) { box-shadow: 0 0 24px var(--accent-genshin-glow); transform: translateY(-1px); }
+.checkout-submit-btn--freefire { background: linear-gradient(135deg, var(--accent-freefire), #dc2626); color: white; }
+.checkout-submit-btn--freefire:hover:not(:disabled) { box-shadow: 0 0 24px var(--accent-freefire-glow); transform: translateY(-1px); }
+.checkout-submit-btn--codm { background: linear-gradient(135deg, var(--accent-codm), #2563eb); color: white; }
+.checkout-submit-btn--codm:hover:not(:disabled) { box-shadow: 0 0 24px var(--accent-codm-glow); transform: translateY(-1px); }
+.checkout-submit-btn--valorant { background: linear-gradient(135deg, var(--accent-valorant), #e63946); color: white; }
+.checkout-submit-btn--valorant:hover:not(:disabled) { box-shadow: 0 0 24px var(--accent-valorant-glow); transform: translateY(-1px); }
+.checkout-submit-btn--league { background: linear-gradient(135deg, var(--accent-league), #a68b1a); color: white; }
+.checkout-submit-btn--league:hover:not(:disabled) { box-shadow: 0 0 24px var(--accent-league-glow); transform: translateY(-1px); }
+.checkout-submit-btn--fortnite { background: linear-gradient(135deg, var(--accent-fortnite), #7c3aed); color: white; }
+.checkout-submit-btn--fortnite:hover:not(:disabled) { box-shadow: 0 0 24px var(--accent-fortnite-glow); transform: translateY(-1px); }
+.checkout-submit-btn--roblox { background: linear-gradient(135deg, var(--accent-roblox), #0088cc); color: white; }
+.checkout-submit-btn--roblox:hover:not(:disabled) { box-shadow: 0 0 24px var(--accent-roblox-glow); transform: translateY(-1px); }
+.checkout-submit-btn--steam { background: linear-gradient(135deg, #66c0f4, #1b2838); color: white; }
+.checkout-submit-btn--steam:hover:not(:disabled) { box-shadow: 0 0 24px var(--accent-steam-glow); transform: translateY(-1px); }
+.checkout-submit-btn--gta5 { background: linear-gradient(135deg, var(--accent-gta5), #ea580c); color: white; }
+.checkout-submit-btn--gta5:hover:not(:disabled) { box-shadow: 0 0 24px var(--accent-gta5-glow); transform: translateY(-1px); }
+.checkout-submit-btn--overwatch { background: linear-gradient(135deg, var(--accent-overwatch), #f59e0b); color: white; }
+.checkout-submit-btn--overwatch:hover:not(:disabled) { box-shadow: 0 0 24px var(--accent-overwatch-glow); transform: translateY(-1px); }
+.checkout-submit-btn--apex { background: linear-gradient(135deg, var(--accent-apex), #b91c1c); color: white; }
+.checkout-submit-btn--apex:hover:not(:disabled) { box-shadow: 0 0 24px var(--accent-apex-glow); transform: translateY(-1px); }
+.checkout-submit-btn--cs2 { background: linear-gradient(135deg, var(--accent-cs2), #d97706); color: white; }
+.checkout-submit-btn--cs2:hover:not(:disabled) { box-shadow: 0 0 24px var(--accent-cs2-glow); transform: translateY(-1px); }
+.checkout-submit-btn--dota2 { background: linear-gradient(135deg, var(--accent-dota2), #b71c1c); color: white; }
+.checkout-submit-btn--dota2:hover:not(:disabled) { box-shadow: 0 0 24px var(--accent-dota2-glow); transform: translateY(-1px); }
+.checkout-submit-btn--minecraft { background: linear-gradient(135deg, var(--accent-minecraft), #558b2f); color: white; }
+.checkout-submit-btn--minecraft:hover:not(:disabled) { box-shadow: 0 0 24px var(--accent-minecraft-glow); transform: translateY(-1px); }
+.checkout-submit-btn--clash { background: linear-gradient(135deg, var(--accent-clash), #f57c00); color: white; }
+.checkout-submit-btn--clash:hover:not(:disabled) { box-shadow: 0 0 24px var(--accent-clash-glow); transform: translateY(-1px); }
+.checkout-submit-btn--brawlstars { background: linear-gradient(135deg, var(--accent-brawlstars), #ff9800); color: white; }
+.checkout-submit-btn--brawlstars:hover:not(:disabled) { box-shadow: 0 0 24px var(--accent-brawlstars-glow); transform: translateY(-1px); }
+.checkout-submit-btn--amongus { background: linear-gradient(135deg, var(--accent-amongus), #c2185b); color: white; }
+.checkout-submit-btn--amongus:hover:not(:disabled) { box-shadow: 0 0 24px var(--accent-amongus-glow); transform: translateY(-1px); }
+.checkout-submit-btn--discord { background: linear-gradient(135deg, var(--accent-discord), #4752c4); color: white; }
+.checkout-submit-btn--discord:hover:not(:disabled) { box-shadow: 0 0 24px var(--accent-discord-glow); transform: translateY(-1px); }
+
+.checkout-submit-btn:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+.form-group .required {
+  color: var(--error);
+}
+
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.form-group input {
+  padding: 0.85rem 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  color: var(--text-bright);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--accent-ml);
+  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.2);
+}
+
+.checkout-card--pubg .form-group input:focus {
+  border-color: var(--accent-pubg);
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.2);
+}
+
+.checkout-card--wildrift .form-group input:focus {
+  border-color: var(--accent-wildrift);
+  box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.2);
+}
+
+.checkout-card--genshin .form-group input:focus {
+  border-color: var(--accent-genshin);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+}
+
+.checkout-card--freefire .form-group input:focus {
+  border-color: var(--accent-freefire);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+}
+
+.checkout-card--codm .form-group input:focus {
+  border-color: var(--accent-codm);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.checkout-card--valorant .form-group input:focus { border-color: var(--accent-valorant); box-shadow: 0 0 0 3px rgba(255, 70, 85, 0.2); }
+.checkout-card--league .form-group input:focus { border-color: var(--accent-league); box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.2); }
+.checkout-card--fortnite .form-group input:focus { border-color: var(--accent-fortnite); box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2); }
+.checkout-card--roblox .form-group input:focus { border-color: var(--accent-roblox); box-shadow: 0 0 0 3px rgba(0, 162, 255, 0.2); }
+.checkout-card--steam .form-group input:focus { border-color: var(--accent-steam); box-shadow: 0 0 0 3px rgba(27, 40, 56, 0.3); }
+.checkout-card--gta5 .form-group input:focus { border-color: var(--accent-gta5); box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2); }
+.checkout-card--overwatch .form-group input:focus { border-color: var(--accent-overwatch); box-shadow: 0 0 0 3px rgba(249, 158, 26, 0.2); }
+.checkout-card--apex .form-group input:focus { border-color: var(--accent-apex); box-shadow: 0 0 0 3px rgba(218, 41, 42, 0.2); }
+.checkout-card--cs2 .form-group input:focus { border-color: var(--accent-cs2); box-shadow: 0 0 0 3px rgba(230, 134, 25, 0.2); }
+.checkout-card--dota2 .form-group input:focus { border-color: var(--accent-dota2); box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.2); }
+.checkout-card--minecraft .form-group input:focus { border-color: var(--accent-minecraft); box-shadow: 0 0 0 3px rgba(124, 179, 66, 0.2); }
+.checkout-card--clash .form-group input:focus { border-color: var(--accent-clash); box-shadow: 0 0 0 3px rgba(255, 152, 0, 0.2); }
+.checkout-card--brawlstars .form-group input:focus { border-color: var(--accent-brawlstars); box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.2); }
+.checkout-card--amongus .form-group input:focus { border-color: var(--accent-amongus); box-shadow: 0 0 0 3px rgba(233, 30, 99, 0.2); }
+.checkout-card--discord .form-group input:focus { border-color: var(--accent-discord); box-shadow: 0 0 0 3px rgba(88, 101, 242, 0.2); }
+
+.form-group input::placeholder {
+  color: var(--text-muted);
+}
+
+.form-error {
+  color: var(--error);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.submit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: var(--transition);
+}
+
+.submit-btn--ml {
+  background: linear-gradient(135deg, var(--accent-ml), #0891b2);
+  color: white;
+}
+
+.submit-btn--ml:hover:not(:disabled) {
+  background: linear-gradient(135deg, #0891b2, var(--accent-ml));
+  box-shadow: 0 0 24px var(--accent-ml-glow);
+  transform: translateY(-1px);
+}
+
+.submit-btn--pubg {
+  background: linear-gradient(135deg, var(--accent-pubg), #d97706);
+  color: white;
+}
+
+.submit-btn--pubg:hover:not(:disabled) {
+  background: linear-gradient(135deg, #d97706, var(--accent-pubg));
+  box-shadow: 0 0 24px var(--accent-pubg-glow);
+  transform: translateY(-1px);
+}
+
+.submit-btn--wildrift {
+  background: linear-gradient(135deg, var(--accent-wildrift), #db2777);
+  color: white;
+}
+
+.submit-btn--wildrift:hover:not(:disabled) {
+  background: linear-gradient(135deg, #db2777, var(--accent-wildrift));
+  box-shadow: 0 0 24px var(--accent-wildrift-glow);
+  transform: translateY(-1px);
+}
+
+.submit-btn--genshin {
+  background: linear-gradient(135deg, var(--accent-genshin), #059669);
+  color: white;
+}
+
+.submit-btn--genshin:hover:not(:disabled) {
+  background: linear-gradient(135deg, #059669, var(--accent-genshin));
+  box-shadow: 0 0 24px var(--accent-genshin-glow);
+  transform: translateY(-1px);
+}
+
+.submit-btn--freefire {
+  background: linear-gradient(135deg, var(--accent-freefire), #dc2626);
+  color: white;
+}
+
+.submit-btn--freefire:hover:not(:disabled) {
+  background: linear-gradient(135deg, #dc2626, var(--accent-freefire));
+  box-shadow: 0 0 24px var(--accent-freefire-glow);
+  transform: translateY(-1px);
+}
+
+.submit-btn--codm {
+  background: linear-gradient(135deg, var(--accent-codm), #2563eb);
+  color: white;
+}
+
+.submit-btn--codm:hover:not(:disabled) {
+  background: linear-gradient(135deg, #2563eb, var(--accent-codm));
+  box-shadow: 0 0 24px var(--accent-codm-glow);
+  transform: translateY(-1px);
+}
+
+.submit-btn--valorant { background: linear-gradient(135deg, var(--accent-valorant), #e63946); color: white; }
+.submit-btn--valorant:hover:not(:disabled) { background: linear-gradient(135deg, #e63946, var(--accent-valorant)); box-shadow: 0 0 24px var(--accent-valorant-glow); transform: translateY(-1px); }
+.submit-btn--league { background: linear-gradient(135deg, var(--accent-league), #a68b1a); color: white; }
+.submit-btn--league:hover:not(:disabled) { background: linear-gradient(135deg, #a68b1a, var(--accent-league)); box-shadow: 0 0 24px var(--accent-league-glow); transform: translateY(-1px); }
+.submit-btn--fortnite { background: linear-gradient(135deg, var(--accent-fortnite), #7c3aed); color: white; }
+.submit-btn--fortnite:hover:not(:disabled) { background: linear-gradient(135deg, #7c3aed, var(--accent-fortnite)); box-shadow: 0 0 24px var(--accent-fortnite-glow); transform: translateY(-1px); }
+.submit-btn--roblox { background: linear-gradient(135deg, var(--accent-roblox), #0088cc); color: white; }
+.submit-btn--roblox:hover:not(:disabled) { background: linear-gradient(135deg, #0088cc, var(--accent-roblox)); box-shadow: 0 0 24px var(--accent-roblox-glow); transform: translateY(-1px); }
+.submit-btn--steam { background: linear-gradient(135deg, #66c0f4, #1b2838); color: white; }
+.submit-btn--steam:hover:not(:disabled) { background: linear-gradient(135deg, #1b2838, #66c0f4); box-shadow: 0 0 24px var(--accent-steam-glow); transform: translateY(-1px); }
+.submit-btn--gta5 { background: linear-gradient(135deg, var(--accent-gta5), #ea580c); color: white; }
+.submit-btn--gta5:hover:not(:disabled) { background: linear-gradient(135deg, #ea580c, var(--accent-gta5)); box-shadow: 0 0 24px var(--accent-gta5-glow); transform: translateY(-1px); }
+.submit-btn--overwatch { background: linear-gradient(135deg, var(--accent-overwatch), #f59e0b); color: white; }
+.submit-btn--overwatch:hover:not(:disabled) { background: linear-gradient(135deg, #f59e0b, var(--accent-overwatch)); box-shadow: 0 0 24px var(--accent-overwatch-glow); transform: translateY(-1px); }
+.submit-btn--apex { background: linear-gradient(135deg, var(--accent-apex), #b91c1c); color: white; }
+.submit-btn--apex:hover:not(:disabled) { background: linear-gradient(135deg, #b91c1c, var(--accent-apex)); box-shadow: 0 0 24px var(--accent-apex-glow); transform: translateY(-1px); }
+.submit-btn--cs2 { background: linear-gradient(135deg, var(--accent-cs2), #d97706); color: white; }
+.submit-btn--cs2:hover:not(:disabled) { background: linear-gradient(135deg, #d97706, var(--accent-cs2)); box-shadow: 0 0 24px var(--accent-cs2-glow); transform: translateY(-1px); }
+.submit-btn--dota2 { background: linear-gradient(135deg, var(--accent-dota2), #b71c1c); color: white; }
+.submit-btn--dota2:hover:not(:disabled) { background: linear-gradient(135deg, #b71c1c, var(--accent-dota2)); box-shadow: 0 0 24px var(--accent-dota2-glow); transform: translateY(-1px); }
+.submit-btn--minecraft { background: linear-gradient(135deg, var(--accent-minecraft), #558b2f); color: white; }
+.submit-btn--minecraft:hover:not(:disabled) { background: linear-gradient(135deg, #558b2f, var(--accent-minecraft)); box-shadow: 0 0 24px var(--accent-minecraft-glow); transform: translateY(-1px); }
+.submit-btn--clash { background: linear-gradient(135deg, var(--accent-clash), #f57c00); color: white; }
+.submit-btn--clash:hover:not(:disabled) { background: linear-gradient(135deg, #f57c00, var(--accent-clash)); box-shadow: 0 0 24px var(--accent-clash-glow); transform: translateY(-1px); }
+.submit-btn--brawlstars { background: linear-gradient(135deg, var(--accent-brawlstars), #ff9800); color: white; }
+.submit-btn--brawlstars:hover:not(:disabled) { background: linear-gradient(135deg, #ff9800, var(--accent-brawlstars)); box-shadow: 0 0 24px var(--accent-brawlstars-glow); transform: translateY(-1px); }
+.submit-btn--amongus { background: linear-gradient(135deg, var(--accent-amongus), #c2185b); color: white; }
+.submit-btn--amongus:hover:not(:disabled) { background: linear-gradient(135deg, #c2185b, var(--accent-amongus)); box-shadow: 0 0 24px var(--accent-amongus-glow); transform: translateY(-1px); }
+.submit-btn--discord { background: linear-gradient(135deg, var(--accent-discord), #4752c4); color: white; }
+.submit-btn--discord:hover:not(:disabled) { background: linear-gradient(135deg, #4752c4, var(--accent-discord)); box-shadow: 0 0 24px var(--accent-discord-glow); transform: translateY(-1px); }
+
+.submit-btn:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+.btn-spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ========== Success ========== */
+.success-page {
+  padding: 2rem 1rem;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-container {
+  max-width: 480px;
+  width: 100%;
+}
+
+.success-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.success-icon-wrap {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.25rem;
+}
+
+.success-checkmark {
+  width: 100%;
+  height: 100%;
+}
+
+.success-circle {
+  stroke: var(--success);
+  stroke-dasharray: 151;
+  stroke-dashoffset: 151;
+  animation: checkmark 0.5s ease-out 0.2s forwards;
+}
+
+.success-header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-bright);
+  margin: 0 0 0.5rem;
+}
+
+.success-subtitle {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.success-order-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  animation: fadeInUp 0.5s ease-out 0.1s backwards;
+}
+
+.success-order-id {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.success-order-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.success-order-value {
+  flex: 1;
+  font-family: monospace;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-bright);
+}
+
+.success-copy-btn {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  padding: 0.4rem;
+  cursor: pointer;
+  color: var(--text-muted);
+  transition: var(--transition);
+}
+
+.success-copy-btn:hover {
+  color: var(--accent-ml);
+  border-color: var(--accent-ml);
+}
+
+.success-order-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.success-order-img {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--glass-border);
+}
+
+.success-order-info {
+  flex: 1;
+}
+
+.success-order-game {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-bright);
+  margin: 0 0 0.2rem;
+}
+
+.success-order-pkg {
+  font-size: 0.9rem;
+  color: var(--text);
+  margin: 0 0 0.2rem;
+}
+
+.success-order-price {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent-ml);
+  margin: 0;
+}
+
+.success-order-divider {
+  height: 1px;
+  background: var(--glass-border);
+  margin: 1rem 0;
+}
+
+.success-order-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.success-meta-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.success-next-steps {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  animation: fadeInUp 0.5s ease-out 0.2s backwards;
+}
+
+.success-next-steps h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-bright);
+  margin: 0 0 1rem;
+}
+
+.success-steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.success-step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.success-step-num {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--accent-ml);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.success-step-item p {
+  font-size: 0.9rem;
+  color: var(--text);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.success-actions {
+  text-align: center;
+  animation: fadeInUp 0.5s ease-out 0.3s backwards;
+}
+
+.success-back-btn {
+  display: inline-block;
+  padding: 0.9rem 1.75rem;
+  background: linear-gradient(135deg, var(--accent-ml), #0891b2);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.success-back-btn:hover {
+  box-shadow: 0 0 24px var(--accent-ml-glow);
+  transform: translateY(-1px);
+}
+
+.success-support-text {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 1rem 0 0;
+}
+
+.success-support-text a,
+.success-support-link {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: var(--accent-ml);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.success-support-text a:hover,
+.success-support-link:hover {
+  text-decoration: underline;
+}
+
+.success-path {
+  stroke: var(--success);
+  stroke-dasharray: 60;
+  stroke-dashoffset: 60;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  animation: checkmark 0.4s ease-out 0.5s forwards;
+}
+
+/* ========== About Page ========== */
+.about-page {
+  flex: 1;
+}
+
+.about-hero {
+  position: relative;
+  padding: 3rem 1.5rem;
+  overflow: hidden;
+}
+
+.about-hero-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.15) 0%, rgba(0, 0, 0, 0.4) 100%);
+  z-index: 0;
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-badge {
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--accent-ml);
+  margin-bottom: 1rem;
+}
+
+.about-hero-content h1 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: var(--text-bright);
+  margin: 0 0 0.75rem;
+}
+
+.about-hero-desc {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+}
+
+.about-section {
+  margin-bottom: 2.5rem;
+}
+
+.about-section h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-bright);
+  margin: 0 0 1rem;
+}
+
+.about-section p {
+  font-size: 1rem;
+  color: var(--text);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.about-values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.about-value-card {
+  background: var(--bg-card);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.about-value-card:hover {
+  border-color: rgba(6, 182, 212, 0.3);
+  box-shadow: 0 0 24px rgba(6, 182, 212, 0.1);
+}
+
+.about-value-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 1rem;
+  color: var(--accent-ml);
+}
+
+.about-value-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.about-value-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-bright);
+  margin: 0 0 0.5rem;
+}
+
+.about-value-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.about-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 2rem;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+}
+
+.about-stat {
+  text-align: center;
+}
+
+.about-stat-value {
+  display: block;
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--accent-ml);
+  margin-bottom: 0.35rem;
+}
+
+.about-stat-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.about-features-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--text);
+  line-height: 2;
+}
+
+.about-features-list li {
+  margin-bottom: 0.25rem;
+}
+
+/* ========== Contact Page ========== */
+.contact-page {
+  flex: 1;
+}
+
+.contact-hero {
+  position: relative;
+  padding: 2.5rem 1.5rem;
+  overflow: hidden;
+}
+
+.contact-hero-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(88, 101, 242, 0.12) 0%, rgba(0, 0, 0, 0.4) 100%);
+  z-index: 0;
+}
+
+.contact-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-badge {
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--accent-discord);
+  margin-bottom: 1rem;
+}
+
+.contact-hero-content h1 {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 800;
+  color: var(--text-bright);
+  margin: 0 0 0.5rem;
+}
+
+.contact-hero-content p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.contact-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+}
+
+.contact-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .contact-layout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .contact-info-cards {
+    width: 280px;
+    flex-shrink: 0;
+  }
+
+  .contact-form-section {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+.contact-info-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-info-card {
+  background: var(--bg-card);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  transition: var(--transition);
+}
+
+.contact-info-card:hover {
+  border-color: rgba(88, 101, 242, 0.3);
+}
+
+.contact-info-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.75rem;
+  color: var(--accent-discord);
+}
+
+.contact-info-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.contact-info-card h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-bright);
+  margin: 0 0 0.35rem;
+}
+
+.contact-info-card p {
+  font-size: 0.95rem;
+  color: var(--text);
+  margin: 0;
+}
+
+.contact-info-note {
+  font-size: 0.8rem !important;
+  color: var(--text-muted) !important;
+  margin-top: 0.35rem !important;
+}
+
+.contact-form-card {
+  background: var(--bg-card);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+}
+
+.contact-form-card h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-bright);
+  margin: 0 0 0.35rem;
+}
+
+.contact-form-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0 0 1.25rem;
+}
+
+.contact-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.contact-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-form-group label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.contact-form-group input,
+.contact-form-group textarea {
+  padding: 0.85rem 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  color: var(--text-bright);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.contact-form-group input:focus,
+.contact-form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent-discord);
+  box-shadow: 0 0 0 3px rgba(88, 101, 242, 0.2);
+}
+
+.contact-form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-submit-btn {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, var(--accent-discord), #4752c4);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: var(--transition);
+}
+
+.contact-submit-btn:hover {
+  box-shadow: 0 0 24px var(--accent-discord-glow);
+  transform: translateY(-1px);
+}
+
+.contact-success-msg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.contact-success-msg svg {
+  width: 56px;
+  height: 56px;
+  color: var(--success);
+}
+
+.contact-success-msg p {
+  font-size: 1rem;
+  color: var(--text);
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .contact-form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========== Mobile Responsive ========== */
+@media (max-width: 640px) {
+  .game-picker {
+    padding: 1rem 0.75rem 2rem;
+  }
+
+  .picker-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .page-title {
+    font-size: 1.75rem;
+  }
+
+  .page-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .game-sections-list {
+    gap: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 0.8rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .game-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+
+  .game-card-inner {
+    padding: 0;
+  }
+
+  .game-card-content {
+    padding: 0.75rem;
+  }
+
+  .game-card-title {
+    font-size: 0.9rem;
+  }
+
+  .game-card-subtitle {
+    font-size: 0.7rem;
+  }
+
+  .game-card-desc {
+    display: none;
+  }
+
+  .game-card-cta {
+    font-size: 0.7rem;
+  }
+
+  .game-card-cta svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .game-packages-view {
+    padding-bottom: 1.5rem;
+  }
+
+  .packages-hero {
+    margin: 0.75rem 0.75rem 1rem;
+    padding: 1.25rem 1rem;
+  }
+
+  .packages-hero-image {
+    width: 64px;
+    height: 64px;
+  }
+
+  .packages-hero-title {
+    font-size: 1.2rem;
+  }
+
+  .packages-info-card {
+    margin: 0 0.75rem 1rem;
+    padding: 1rem;
+  }
+
+  .packages-info-desc {
+    font-size: 0.85rem;
+  }
+
+  .packages-section-label {
+    margin: 0 0.75rem 0.6rem;
+  }
+
+  .packages-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.65rem;
+    padding: 0 0.75rem;
+  }
+
+  .package-card-inner {
+    padding: 0.85rem;
+  }
+
+  .package-amount-value {
+    font-size: 1.2rem;
+  }
+
+  .package-amount-unit {
+    font-size: 0.7rem;
+  }
+
+  .package-price {
+    font-size: 0.8rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .package-buy {
+    padding: 0.45rem 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .checkout-page {
+    padding: 1rem 0.75rem;
+  }
+
+  .checkout-card {
+    padding: 1.25rem;
+  }
+
+  .checkout-order-summary {
+    position: static;
+  }
+
+  .form-group input {
+    padding: 0.75rem 0.9rem;
+    font-size: 16px;
+  }
+
+  .success-page {
+    padding: 1rem 0.75rem;
+  }
+
+  .success-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .success-order-card {
+    padding: 1.25rem;
+  }
+
+  .navbar-link {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .about-stats-grid {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+
+  .about-stat-value {
+    font-size: 1.5rem;
+  }
+}
